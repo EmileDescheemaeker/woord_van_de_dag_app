@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bekijk Woorden</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Opgeslagen Woorden</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Woord</th>
+                    <th>Definitie</th>
+                    <th>Voorbeeldzin</th>
+                    <th>Datum</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for word in words %}
+                    <tr>
+                        <td>{{ word['id'] }}</td>
+                        <td>{{ word['word'] }}</td>
+                        <td>{{ word['definition'] }}</td>
+                        <td>{{ word['example_sentence'] }}</td>
+                        <td>{{ word['date'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

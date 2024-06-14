@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nieuw Woord Toevoegen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Nieuw Woord Toevoegen</h1>
+        <form method="post">
+            <label for="word">Woord:</label>
+            <input type="text" id="word" name="word" required><br>
+            <label for="definition">Definitie:</label>
+            <input type="text" id="definition" name="definition" required><br>
+            <label for="example_sentence">Voorbeeldzin:</label>
+            <input type="text" id="example_sentence" name="example_sentence" required><br>
+            <button type="submit">Opslaan</button>
+        </form>
+    </div>
+</body>
+</html>
